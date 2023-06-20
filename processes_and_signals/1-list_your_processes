@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#a Bash script that displays a list of currently running processes.
+# all process
+#user-oriented format
+#show process hierarchy 
+ps aux 
