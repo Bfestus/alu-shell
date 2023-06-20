@@ -3,4 +3,4 @@
 # all process
 #user-oriented format
 #show process hierarchy 
-ps aux 
+ps auxf  
