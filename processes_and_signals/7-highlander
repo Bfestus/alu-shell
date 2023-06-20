@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # using while loop to write that kind fo script 
 trap "echo I am invincible!!!" SIGTERM
-while True; do 
-	echo "To infinity and beyond"
+while true; do 
+	echo To infinity and beyond
 	sleep 2
 done
 
