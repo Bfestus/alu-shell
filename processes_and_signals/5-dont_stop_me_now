@@ -2,5 +2,5 @@
 # terminating process using kill command
 #generate PID = pgrep $(<4-to_infinity_and_beyond>)
 #terminating a process: kill $PID
-kill $(pgrep 4-to_infinity_and_beyond)
+kill "$(pgrep 4-to_infinity_and_beyond)"
 
