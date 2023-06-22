@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
 # Provides:          manage_my_process
 # Required-Start:    $local_fs $network
-# Required-Stop:     $local_fs $network
+# Required-Stop:     $local_fs $network 
 
-# Check for the required arguments
-if [ $# -ne 1 ]; then
-  echo "Usage: 11-manage_my_process {start|stop|restart}"
-  exit 1
-fi
+SCRIPT="/path/to/manage_my_process"
 
-# Get the command
-command="$1"
+case "$1" in
+  start)
+    $SCRIPT start
+    ;;
+  stop)
+    $SCRIPT stop
+    ;;
+  restart)
+    $SCRIPT restart
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+    ;;
+esac
 
-# Source the manage_my_process script
-. ./manage_my_process
-
-# Execute the command
-$command
-
+exit 0
