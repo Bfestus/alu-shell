@@ -1,24 +1,7 @@
 #!/usr/bin/env bash
-# Provides:          manage_my_process
-# Required-Start:    $local_fs $network
-# Required-Stop:     $local_fs $network 
-
-SCRIPT="/path/to/manage_my_process"
-
-case "$1" in
-  start)
-    $SCRIPT start
-    ;;
-  stop)
-    $SCRIPT stop
-    ;;
-  restart)
-    $SCRIPT restart
-    ;;
-  *)
-    echo "Usage: $0 {start|stop|restart}"
-    exit 1
-    ;;
-esac
-
-exit 0
+# Bash script Indefinitely writes I am alive! to the file /tmp/my_process
+while true;
+do
+    echo "I am alive!" > /tmp/my_process
+    sleep 2
+done
